@@ -1,0 +1,202 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 27, 2016, 3:58:42 AM
+    Author     : Minh Duc Bui
+*/
+
+body{
+    width:1000px;
+    margin:0px auto;
+}
+
+#main{
+    float:center;
+}
+
+#center{
+    width:1000px;
+    background:#F5F5F5;
+    color:#000;
+    float:center;   
+    text-align:300px; 
+}
+#profilepic{
+    float:left;
+}
+
+.os-win body, .os-win button, .os-win input, .os-win textarea {
+    font-family: Arial,sans-serif;
+}
+
+@page {  
+    margin:0cm 0cm;
+}
+#cv_document {
+    margin: 1.5cm 2cm
+}
+
+th,td{
+   border-bottom: 1px solid #ddd;
+}
+
+p {
+    margin-left: 15px;
+}
+
+td, th { 
+    font-size:12pt;
+    margin-right: 15cm;
+}
+h1, h2, h3, h4, h5, h6 {
+    clear:both 
+}
+ol, ul { 
+    margin:0; 
+    padding:0;
+}
+li {
+    list-style: none; 
+    margin:0; 
+    padding:0;
+    margin-left: 15px;
+}
+li span { 
+    clear: both;
+    line-height:0;
+    width:0; 
+    height:0;
+    margin:0;
+    padding:0;
+}
+span.footnodeNumber {
+    padding-right:1em; 
+}
+span.annotation_style_by_filter {
+    font-size:95%; 
+    font-family:Arial;
+    background-color:#fff000;
+    margin:0;
+    border:0;
+    padding:0;
+}
+* { margin:0;}
+.personal_information_title {
+    display: inline;
+    text-align: left;
+    font: 16pt Nimbus Sans L;
+}
+.personal_information {
+    display: inline;
+    font:bold 12pt Nimbus Sans L;
+}
+.P1 { 
+    font-size:12pt; 
+    font-family:Liberation Serif;
+    writing-mode:page;
+}
+.P2 { 
+    font-size:12pt; 
+    font-family:Liberation Serif;
+    writing-mode:page;
+    text-align:center ! important;
+}
+.P3 {
+    font-size:12pt;
+    font-family:Liberation Serif;
+    writing-mode:page;
+}
+.P4 {
+    font-size:13pt;
+    font-family:Nimbus Mono L;
+    writing-mode:page;
+    font-weight:bold;
+}
+.Table_20_Contents {
+    font-size:12pt;
+    font-family:Liberation Serif;
+    writing-mode:page;
+}
+.Table {
+    width:auto;
+    margin-left:0cm;
+    margin-right:auto;
+}
+
+.Table1{
+    width:100%;
+    margin-left:0cm;
+    margin-right:0cm;
+    border: 1px solid;
+    background-color: #cccccc;
+}
+
+.Table_Experience_Place {
+    display: inline;
+    font:bold 12pt Nimbus Sans L;
+}
+.Table_Experience_Period {
+    display: inline;
+}
+.Table_Experience_Position {
+    display: block-flex;
+    margin-bottom:1em;
+    font:italic 11pt Nimbus Sans L;
+}
+.Table_Experience_Role {
+    margin-left: 1em;
+}
+.Table_Experience_Role li {
+    list-style: square outside none !important;
+    font:11pt DejaVu Sans;
+}
+.Table_Experience_Technology {
+    display: inline;
+    font:11pt Nimbus Sans L;
+}
+.Table_Education {
+    margin-left: 1em;
+}
+.Table_Education li {
+    list-style: square outside none !important;
+}
+.Table_Education p {
+}
+.Table_Education_Title {
+    display: inline;
+    font:bold 12pt Nimbus Sans L;
+}
+.Table_Education_Especiality {
+    display: inline;
+}
+.Table_Education_Place {
+    display: inline-flex;
+    font:italic 11pt Nimbus Sans L;
+}
+.Table_Education_Period {
+    display: inline;
+    font:11pt DejaVu Sans Light;
+}
+.Table_Interests {
+    display: inline;
+    font:12pt Liberation Serif;
+}
+
+input[readonly], textArea {
+    background-color: blue;
+}
+input[readonly="readonly"], textArea {
+    background-color: transparent;
+}
+input[type=text], textArea {
+    line-height: 15px;
+    border: 0;
+    border-bottom: 1px dotted #888;
+    color: #333; }
+
+form input[type=text].inputted, textArea {
+    border-bottom: 0;
+    background: transparent; }

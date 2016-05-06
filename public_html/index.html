@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bui Minh Duc</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script language="javascript" src="app/components/angular.min.js"></script>
+        <script language="javascript" src="app/app.js"></script>
+        <link href="app/templates/styles.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body class = "innertube" >
+        <div id="cv_document" ng-controller="MyController" >
+            <input style="width:100%" class="P2" ng-model="cv.document" type ="text" ng-readonly="truefalse"/>
+            
+            <button ng-click="edit()">edit</button>
+            <button ng-click="save()">save</button>
+            <!-- <p>{{truefalse}}</p> -->
+            <table class="Table1">
+                <tr>
+                    <td>
+                        <img lazyload="true" alt="Profile Picture" width="200" height="200" src="app/images/profile.png">
+                    </td>
+                    <td >
+
+                        <table style="height: 100%">
+                            <tr>
+                                <th>
+                                    <p class="personal_information_title">Name: </p>
+                                </th>
+                                <td>
+                                    <p class="personal_information"> 
+                                        <input style="width: 30px" class ="" ng-model="cv.name" type="text" ng-readonly="truefalse">
+                                        <input class ="" ng-model="cv.surname" type="text" ng-readonly="truefalse">
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p class="personal_information_title">Country: </p>
+                                </th>
+                                <td>
+                                    <p class="personal_information"> <input class =""  ng-model="cv.country" type="text" ng-readonly="truefalse"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p class="personal_information_title">Carrer: </p>
+                                </th>
+                                <td>
+                                    <p class="personal_information"> <input class ="" ng-model="cv.carrer" type="text" ng-readonly="truefalse"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p class="personal_information_title" >Contact Details: </p>
+                                </th>
+                                <td>
+                                    <p class="personal_information"> phone:</p>
+                                    <p class="personal_information"> <input class ="" ng-model="cv.phones.home" type="text" ng-readonly="truefalse"></p>
+                                    </br>
+                                    <p class="personal_information"> email:</p>
+                                    <p class="personal_information"> <input class ="" ng-model="cv.email[0]" type="text" ng-readonly="truefalse"></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <br/>
+            <br/>
+
+            <table border="0" cellspacing="0" cellpadding="0" class="Table1">
+                <!-- Objetive -->
+                <tr>
+                    <td style="border-right-style: groove;">
+                        <p class="P4">Objetive</p><p class="P4">
+                    </td>
+                    <td  colspan="2">
+                        <p class="P3" ng-repeat="objetive in cv.objetives">
+                            <textarea ng-model="objetive" ng-readonly="truefalse" rows="2" cols="100">{{objetive}}</textarea>
+                            <!-- <input style="width: 100%; rows: 5;" class ="" ng-model="objetive" type="text" ng-readonly="truefalse"> -->
+                        </p>
+                    </td>
+                </tr>
+
+                <!-- Experience -->
+                <tr ng-repeat="experience in cv.experience" >
+                    <td ng-if="$index === 0" style="text-align:left;width:3.598cm;border-right-style: groove; " rowspan="{{size(cv.experience)}}">
+                        <p class="P4">Experience</p></td>
+                    <td style="text-align:left;width:13.414cm; "  colspan="2">
+                        <p class="Table_Experience_Place"><input style="width: 210px" class ="" ng-model="cv.experience[$index].place" type="text" ng-readonly="truefalse"></p>
+                        <p class="Table_Experience_Period">(<input style="width: 29px" class ="" ng-model="cv.experience[$index].period" type="text" ng-readonly="truefalse">)</p>
+                        <p class="Table_Experience_Position"><input class ="" ng-model="cv.experience[$index].position" type="text" ng-readonly="truefalse"></p>
+                        <p class="P3">Role:</p>
+                        <ul class="Table_Experience_Role">
+                            <li ng-repeat="role in cv.experience[0].role"><input class ="" ng-model="role" type="text" ng-readonly="truefalse"></li>
+                        </ul>
+                        <p class="P3">Technology Used:</p>
+                        <span style="margin-left:1em"></span>
+                        <p class="Table_Experience_Technology" ng-repeat="technology in cv.experience[$index].technology">{{print($index)}}<input style="width: 70px" class ="" ng-model="technology" type="text" ng-readonly="truefalse"></p></td>
+                </tr>
+
+                <!-- Skills -->
+                <tr  ng-repeat="parte in partes">
+                    <td ng-if="$index === 0" style="text-align:left;width:3.598cm; border-right-style: groove;" rowspan="{{size(cv.skills)}}">
+                        <p class="P4">Skill <br/>Summary</p></td>
+                    <td style="text-align:left;width:3.414cm; " ><p class="P3">{{partes[$index]| uppercase}}</p></td>
+                    <td style="text-align:left" ><p class="P3" ng-repeat="skill in cv.skills[parte]"><input style="width: 100px" class ="" ng-model="skill" type="text" ng-readonly="truefalse"></p></td>
+                </tr>
+
+                <!-- Education -->
+                <tr>
+                    <td style="text-align:left;width:3.598cm; border-right-style: groove;" ><p class="P4">Education</p></td>
+                    <td style="text-align:left;width:13.414cm; "  colspan="2">
+                        <ul class="Table_Education">
+                            <li ng-repeat="education in cv.education">
+                                <p class="Table_Education_Title"><input style="width: 230px" class ="" ng-model="education.title" type="text" ng-readonly="truefalse"></p>
+                                <p class="Table_Education_Especiality">(<input style="width: 30px" class ="" ng-model="education.especiality" type="text" ng-readonly="truefalse">)</p>
+                                <p class="Table_Education_Place"><input style="width: 250px" class ="" ng-model="education.place" type="text" ng-readonly="truefalse">,</p>
+                                <p class="Table_Education_Period"><input style="width: 80px" class ="" ng-model="education.period" type="text" ng-readonly="truefalse"></p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <!-- Interests -->
+                <tr>
+                    <td style="text-align:left;width:3.598cm; border-right-style: groove;" ><p class="P4">Interests</p></td>
+                    <td style="text-align:left;width:13.414cm; "  colspan="2">
+                        <p class="Table_Interests" ng-repeat="interest in cv.interests">{{print($index)}}<input style="width: 100px" class ="" ng-model="interest" type="text" ng-readonly="truefalse"></p></td>
+                </tr>
+            </table>
+        </div>
+</body>
+</html>

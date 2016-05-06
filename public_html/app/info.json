@@ -1,0 +1,110 @@
+{
+    "document": "CURRICULUM VITAE",
+    "name": "Duc",
+    "surname": "Bui Minh",
+    "country": "Viet Nam",
+    "carrer": "IT",
+    "phones": {
+        "home": "0963055407",
+        "mobile": "0963055407"
+    },
+    "email": ["minhduc074@gmail.com"
+    ],
+    "objetives": [
+        "Bui Minh Duc is a student at Ho Chi Minh University of Science. Studying at Faculty of Information Technology. My dream is a back-end developer"
+    ],
+    "skills": {
+        "languages": [
+            "C",
+            "C++",
+            ".Net",
+            "Java",
+            "javascript"
+        ],
+        "web": [
+            "http",
+            "html",
+            "json"
+        ],
+        "frameworks": [
+            "angular.js",
+            "Spring",
+            "Hibernate"
+        ],
+        "DB": [
+            "SQL Server",
+            "MySQL"
+        ],
+        "IDE": [
+            "Eclipse",
+            "Notepad++",
+            "Visual Studio"
+        ],
+        "version control": [
+        ],
+        "testing": [
+        ],
+        "Development": [
+        ]
+    },
+    "experience": [
+        {
+            "place": "Ho Chi Minh University of Science",
+            "period": "2013",
+            "position": "Student",
+            "role": [
+                "Developer", "Tester"
+            ],
+            "technology": [
+                "C",
+                "Java",
+                "C++",
+                "JavaScript",
+                ".Net"
+            ]
+        },
+        {
+            "place": "Huynh Tan Phat high school",
+            "period": "2010",
+            "position": "Student",
+            "role": [
+                "Developer"
+            ],
+            "technology": [
+                "Pascal"
+            ]
+        }
+        
+    ],
+    "education": [
+        {
+            "title": "Thoi Lai primary school",
+            "especiality": "",
+            "place": "Thoi Lai, Binh Dai, Ben Tre, Viet Nam",
+            "period": "2001 to 2006"
+        },
+        {
+            "title": "Thoi Lai junior high school",
+            "especiality": "",
+            "place": "Thoi Lai, Binh Dai, Ben Tre, Viet Nam",
+            "period": "2006 to 2010"
+        },
+        {
+            "title": "Huynh Tan Phat high school",
+            "especiality": "",
+            "place": "Chau Hung, Binh Dai, Ben Tre, Viet Nam",
+            "period": "2010 to 2013"
+        },
+        {
+            "title": "Ho Chi Minh University of Science",
+            "especiality": "",
+            "place": "Ho Chi Minh city",
+            "period": "2013 to now"
+        }
+    ],
+    "interests": [
+        "Coding",
+        "Playing game",
+        "Run"
+    ]
+}
